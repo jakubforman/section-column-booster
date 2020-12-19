@@ -8,6 +8,13 @@ use Elementor\Element_Section;
 use SectionColumnBooster\Controls\MultiUnit;
 use SectionColumnBooster\Utilities\SpecificValidator;
 
+/**
+ * Class SectionColumnBooster
+ *
+ * Main booster class
+ *
+ * @package SectionColumnBooster\Extend
+ */
 class SectionColumnBooster
 {
     /**
@@ -32,7 +39,7 @@ class SectionColumnBooster
      * @var string Minimum PHP version required to run the plugin.
      * @since 1.0.0
      */
-    const MINIMUM_PHP_VERSION = '7.0';
+    const MINIMUM_PHP_VERSION = '7.1';
 
     /**
      * Define localised domain
