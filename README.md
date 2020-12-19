@@ -13,6 +13,8 @@ Section & Column Booster is a open source plugin allow ordering column in respon
 column what you want. It's enabling horizontal align columns in a section. All widgets & extension that can be used with
 [Elementor page builder](https://wordpress.org/plugins/elementor/)
 
+![Plugin Preview](assets/preview.png "Preview of plugin")
+
 ### Installation and usage
 
 1. Install and activate the **required plugin** [Elementor page builder](https://wordpress.org/plugins/elementor/).
