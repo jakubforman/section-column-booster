@@ -1,12 +1,14 @@
 <?php
 
-namespace SectionColumnBooster\Extend;
+namespace jayjay666\SectionColumnBooster;
 
 use Elementor\Controls_Manager;
-use Elementor\Element_Column;
 use Elementor\Element_Section;
-use SectionColumnBooster\Controls\MultiUnit;
-use SectionColumnBooster\Utilities\SpecificValidator;
+use jayjay666\SectionColumnBooster\Controls\MultiUnit;
+use jayjay666\SectionColumnBooster\Extend\Elements\Column;
+use jayjay666\WPRequirementsChecker\Validator;
+
+// use jayjay666\SectionColumnBooster\Utilities\PluginValidator;
 
 /**
  * Class SectionColumnBooster
@@ -135,18 +137,24 @@ class SectionColumnBooster
      */
     public function init()
     {
-        if ((new SpecificValidator(self::DOMAIN, self::VERSION, self::MINIMUM_ELEMENTOR_VERSION, self::MINIMUM_PHP_VERSION))->init()) {
-            // přidá vlastní ovládací prvky
-            // TODO: dodělat ovládací prvky
-            // add_action('elementor/controls/controls_registered', [$this, 'init_controls']);
-
-
-            // Přidám prvky do třídy sloupce
-            add_action('elementor/element/column/layout/before_section_end', [__CLASS__, 'add_column_controls']);
-
-            // přidá rozšířené možnosti sekcí
-            add_action('elementor/element/section/section_layout/before_section_end', [__CLASS__, 'add_section_controls']);
+        // Check requirements
+        $validator = new Validator('7.1', 'section-column-booster/section-column-booster.php', self::DOMAIN);
+        // $validator = new PluginValidator('7.1', 'section-column-booster/section-column-booster.php',self::DOMAIN);
+        $validator->addRequiredPlugin('elementor/elementor.php', '3.0');
+        if (!$validator->check()) {
+            return;
         }
+
+        // přidá vlastní ovládací prvky
+        // TODO: dodělat ovládací prvky
+        // add_action('elementor/controls/controls_registered', [$this, 'init_controls']);
+
+
+        // Přidám prvky do třídy sloupce
+        (new Column())->init();
+
+        // přidá rozšířené možnosti sekcí
+        add_action('elementor/element/section/section_layout/before_section_end', [__CLASS__, 'add_section_controls']);
     }
 
     /**
@@ -180,62 +188,5 @@ class SectionColumnBooster
         );
     }
 
-    /**
-     * Přidává ovládací prvky do sloupečků
-     *
-     * @param Element_Column $element
-     */
-    public static function add_column_controls(Element_Column $element)
-    {
-        //
-        // Přidám responzivní ovladač pro order
-        $element->add_responsive_control(
-            '_scb_column_order',
-            [
-                // 'devices' => [], // Přidá další
-                'label' => __('Column Order', self::DOMAIN),
-                'separator' => 'before',
-                'type' => Controls_Manager::NUMBER,
-                'selectors' => [
-                    '{{WRAPPER}}.elementor-column' => '-webkit-box-ordinal-group: calc({{VALUE}} + 1 ); -ms-flex-order:{{VALUE}}; order: {{VALUE}};',
-                ],
-                'description' => sprintf(
-                    __('Column ordering is a great addition for responsive design. You can learn more about CSS order property from %sMDN%s or %sw3schools%s.', self::DOMAIN),
-                    '<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items#The_order_property" target="_blank">',
-                    '</a>',
-                    '<a href="https://www.w3schools.com/cssref/css3_pr_order.asp" target="_blank">',
-                    '</a>'
-                ),
-            ]
-        );
 
-        //
-        // Přidám responzivní ovladač pro šířku
-        $element->add_responsive_control(
-            '_scb_column_width',
-            [
-                'label' => __('Custom Column Width', self::DOMAIN),
-                'type' => Controls_Manager::TEXT,
-                'label_block' => true,
-                'description' => __('E.g 250px, 50%, calc(100% - 250px)', self::DOMAIN),
-                'selectors' => [ // Zde se předají data do CSS
-                    '{{WRAPPER}}.elementor-column' => 'width: {{VALUE}};',
-                ],
-            ]
-        );
-
-        /* TODO: dodělat ovládací prvky
-        // Přidává možnost aplikovat margin na sloupec jako takový
-        $element->add_responsive_control(
-            'spicy_image_border_radius',
-            [
-                'label' => __('Border Radius', self::DOMAIN),
-                'type' => 'scp-multi-unit-control',
-                'size_units' => ['px', '%', 'text'],
-                'selectors' => [
-                    '{{WRAPPER}}' => 'margin: {{TOP}}{{TOP_UNIT}} {{RIGHT}}{{RIGHT_UNIT}} {{BOTTOM}}{{BOTTOM_UNIT}} {{LEFT}}{{LEFT_UNIT}};',
-                ],
-            ]
-        );*/
-    }
 }

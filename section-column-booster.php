@@ -5,7 +5,7 @@
  * Plugin URI: https://github.com/jayjay666/section-column-booster
  * Description: An extension plugin used in sections & columns for Elementor. It's enabling custom width in columns & horizontal align columns in a section.
  * Version: 1.0
- * Author: JayJay666
+ * Author: jayjay666
  * Author URI: http://jakubforman.eu
  * Domain Path: /languages/
  * License: GPL v2 or later
@@ -22,7 +22,7 @@ if (is_readable(__DIR__ . '/vendor/autoload.php')) {
     require __DIR__ . '/vendor/autoload.php';
 }
 
-use SectionColumnBooster\Extend\SectionColumnBooster;
+use jayjay666\SectionColumnBooster\SectionColumnBooster;
 
 
 // Instance hlavní třídy

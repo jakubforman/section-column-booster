@@ -1,20 +1,34 @@
 {
   "name": "jayjay666/section-column-booster",
-  "description": "An extension plugin for section & column in Elementor page builder WordPress plugin. \"Elementor\" plugin is required.",
-  "license": "GPL-2.0+",
   "type": "wordpress-plugin",
+  "description": "An extension plugin for section & column in Elementor page builder WordPress plugin. \"Elementor\" plugin is required.",
+  "homepage": "https://github.com/jayjay666/section-column-booster",
+  "license": "GPL-2.0+",
+  "keywords": [
+    "WP",
+    "WP Plugin",
+    "WordPress",
+    "WordPress Plugin",
+    "Elementor",
+    "Elementor Plugin",
+    "Elementor Page Builder",
+    "Elementor Page Builder Plugin"
+  ],
   "authors": [
     {
       "name": "Jakub Josef Forman",
+      "email": "dev@jakubforman.com",
       "homepage": "https://jakubforman.eu",
       "role": "Developer"
     }
   ],
   "require": {
+    "php": ">=7.1",
+    "jayjay666/wp-requirements-checker": "^1.0"
   },
   "autoload": {
     "psr-4": {
-      "SectionColumnBooster\\": "src/"
+      "jayjay666\\SectionColumnBooster\\": "src/"
     }
   },
   "minimum-stability": "dev",

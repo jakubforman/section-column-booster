@@ -1,6 +1,6 @@
 <?php
 
-namespace SectionColumnBooster\Controls;
+namespace jayjay666\SectionColumnBooster\Controls;
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
