@@ -17,27 +17,11 @@ use jayjay666\SectionColumnBooster\SectionColumnBooster;
 class Column
 {
     /**
-     * Init column extension
-     */
-    function init()
-    {
-        $this->addActions();
-    }
-
-    /**
-     * Add all column actions
-     */
-    protected function addActions()
-    {
-        add_action('elementor/element/column/layout/before_section_end', [__CLASS__, 'add_column_controls']);
-    }
-
-    /**
      * Add new column controls
      *
      * @param Element_Column $element
      */
-    public static function add_column_controls(Element_Column $element)
+    public static function addColumnControls(Element_Column $element)
     {
         //
         // Přidám responzivní ovladač pro order
