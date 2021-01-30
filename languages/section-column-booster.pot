@@ -1,0 +1,55 @@
+# Copyright (C) 2021 Jakub Josef Forman
+# This file is distributed under the same license as the Section Column Booster plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Section Column Booster 1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/section-column-booster\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-01-30T10:37:47+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: section-column-booster\n"
+
+#. Plugin Name of the plugin
+msgid "Section Column Booster"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://jakubforman.eu/section-column-booster"
+msgstr ""
+
+#. Description of the plugin
+msgid "An extension plugin used in sections & columns for Elementor. It's enabling custom width in columns & horizontal align columns in a section."
+msgstr ""
+
+#. Author of the plugin
+msgid "Jakub Josef Forman"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://jakubforman.eu"
+msgstr ""
+
+#: src/Extend/Elements/Column.php:31
+msgid "Column Order"
+msgstr ""
+
+#: src/Extend/Elements/Column.php:38
+msgid "Column ordering is a great addition for responsive design. You can learn more about CSS order property from %sMDN%s or %sw3schools%s."
+msgstr ""
+
+#: src/Extend/Elements/Column.php:52
+msgid "Custom Column Width"
+msgstr ""
+
+#: src/Extend/Elements/Column.php:55
+msgid "E.g 250px, 50%, calc(100% - 250px)"
+msgstr ""
+
+#: src/Extend/Elements/Section.php:30
+msgid "Horizontal align"
+msgstr ""

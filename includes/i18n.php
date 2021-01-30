@@ -23,7 +23,7 @@ class i18n
     public function LoadPluginTextdomain()
     {
         load_plugin_textdomain(
-            SectionColumnBooster::DOMAIN,
+            'section-column-booster',
             false,
             dirname(dirname(plugin_basename(__FILE__))) . '/languages/'
         );

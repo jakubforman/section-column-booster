@@ -22,7 +22,7 @@ class RequirementValidator
     static function requirementsValidate()
     {
         // Check requirements
-        $validator = new Validator('7.1', 'section-column-booster/section-column-booster.php', SectionColumnBooster::DOMAIN);
+        $validator = new Validator('7.1', 'section-column-booster/section-column-booster.php', 'section-column-booster');
         // $validator = new PluginValidator('7.1', 'section-column-booster/section-column-booster.php',self::DOMAIN);
         $validator->addRequiredPlugin('elementor/elementor.php', '3.0');
         if (!$validator->check()) {

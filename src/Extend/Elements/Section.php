@@ -4,16 +4,14 @@ namespace jayjay666\SectionColumnBooster\Extend\Elements;
 
 
 use Elementor\Controls_Manager;
-use Elementor\Element_Column;
 use Elementor\Element_Section;
-use jayjay666\SectionColumnBooster\SectionColumnBooster;
 
 /**
  * Class Section
  *
  * Extending existing sections in elementor
  *
- * @package SectionColumnBooster\Extend\Elements
+ * @package jayjay666\SectionColumnBooster\Extend\Elements
  */
 class Section
 {
@@ -29,7 +27,7 @@ class Section
         $element->add_responsive_control(
             'scb_section_horizontal_align',
             [
-                'label' => __('Horizontal align', SectionColumnBooster::DOMAIN),
+                'label' => __('Horizontal align', 'section-column-booster'),
                 'type' => Controls_Manager::SELECT,
                 'default' => '',
                 'options' => [

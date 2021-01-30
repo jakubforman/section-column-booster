@@ -2,19 +2,19 @@
 
 /**
  * Plugin Name: Section Column Booster
- * Plugin URI: https://github.com/jayjay666/section-column-booster
+ * Plugin URI: https://jakubforman.eu/personal-projects/section-column-booster/
  * Description: An extension plugin used in sections & columns for Elementor. It's enabling custom width in columns & horizontal align columns in a section.
- * Version: 1.0
- * Author: jayjay666
+ * Version: 1.1
+ * Author: Jakub Josef Forman
  * Author URI: http://jakubforman.eu
  * Domain Path: /languages/
- * License: GPL v2 or later
+ * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: section-column-booster
+ * Domain Path: /languages/
  */
 use jayjay666\SectionColumnBooster\SectionColumnBooster;
 
-//
-// Kontrola
 defined('ABSPATH') || exit;
 
 /**

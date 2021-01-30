@@ -5,14 +5,13 @@ namespace jayjay666\SectionColumnBooster\Extend\Elements;
 
 use Elementor\Controls_Manager;
 use Elementor\Element_Column;
-use jayjay666\SectionColumnBooster\SectionColumnBooster;
 
 /**
  * Class Column
  *
  * Extending existing columns in elementor
  *
- * @package SectionColumnBooster\Extend\Elements
+ * @package jayjay666\SectionColumnBooster\Extend\Elements
  */
 class Column
 {
@@ -29,14 +28,14 @@ class Column
             '_scb_column_order',
             [
                 // 'devices' => [], // Přidá další
-                'label' => __('Column Order', SectionColumnBooster::DOMAIN),
+                'label' => __('Column Order', 'section-column-booster'),
                 'separator' => 'before',
                 'type' => Controls_Manager::NUMBER,
                 'selectors' => [
                     '{{WRAPPER}}.elementor-column' => '-webkit-box-ordinal-group: calc({{VALUE}} + 1 ); -ms-flex-order:{{VALUE}}; order: {{VALUE}};',
                 ],
                 'description' => sprintf(
-                    __('Column ordering is a great addition for responsive design. You can learn more about CSS order property from %sMDN%s or %sw3schools%s.', SectionColumnBooster::DOMAIN),
+                    __('Column ordering is a great addition for responsive design. You can learn more about CSS order property from %sMDN%s or %sw3schools%s.', 'section-column-booster'),
                     '<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items#The_order_property" target="_blank">',
                     '</a>',
                     '<a href="https://www.w3schools.com/cssref/css3_pr_order.asp" target="_blank">',
@@ -50,10 +49,10 @@ class Column
         $element->add_responsive_control(
             '_scb_column_width',
             [
-                'label' => __('Custom Column Width', SectionColumnBooster::DOMAIN),
+                'label' => __('Custom Column Width', 'section-column-booster'),
                 'type' => Controls_Manager::TEXT,
                 'label_block' => true,
-                'description' => __('E.g 250px, 50%, calc(100% - 250px)', SectionColumnBooster::DOMAIN),
+                'description' => __('E.g 250px, 50%, calc(100% - 250px)', 'section-column-booster'),
                 'selectors' => [ // Zde se předají data do CSS
                     '{{WRAPPER}}.elementor-column' => 'width: {{VALUE}};',
                 ],
@@ -65,7 +64,7 @@ class Column
         $element->add_responsive_control(
             'spicy_image_border_radius',
             [
-                'label' => __('Border Radius', SectionColumnBooster::DOMAIN),
+                'label' => __('Border Radius', 'section-column-booster'),
                 'type' => 'scp-multi-unit-control',
                 'size_units' => ['px', '%', 'text'],
                 'selectors' => [

@@ -9,6 +9,13 @@ use jayjay666\SectionColumnBooster\Extend\Elements\Column;
 use jayjay666\SectionColumnBooster\Extend\Elements\Section;
 use jayjay666\SectionColumnBooster\includes\Loader;
 
+/**
+ * Class Elementor
+ *
+ * Main class working with Elementor
+ *
+ * @package jayjay666\SectionColumnBooster
+ */
 class Elementor
 {
     /**

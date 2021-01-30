@@ -1,0 +1,3 @@
+# Generate fresh POT - https://developer.wordpress.org/cli/commands/i18n/make-pot/
+wp i18n make-pot . languages/section-column-booster.pot --domain=section-column-booster
+

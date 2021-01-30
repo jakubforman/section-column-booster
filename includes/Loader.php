@@ -10,7 +10,7 @@ namespace jayjay666\SectionColumnBooster\includes;
  *
  * @since 1.1
  * @package    SectionColumnBooster
- * @subpackage SectionColumnBooster/includes
+ * @subpackage jayjay666\SectionColumnBooster\includes
  */
 class Loader
 {

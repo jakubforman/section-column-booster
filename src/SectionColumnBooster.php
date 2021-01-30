@@ -11,23 +11,10 @@ use jayjay666\SectionColumnBooster\includes\Loader;
  *
  * Main booster class
  *
- * @package SectionColumnBooster
+ * @package jayjay666\SectionColumnBooster
  */
 class SectionColumnBooster
 {
-    /**
-     * Plugin Version
-     *
-     * @var     string The plugin version.
-     * @since   1.0.0
-     */
-    const VERSION = '1.0.0';
-
-    /**
-     * Define localised domain
-     */
-    const DOMAIN = 'elementor-column-order';
-
     /**
      * Constructor
      *
