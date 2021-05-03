@@ -4,7 +4,7 @@
  * Plugin Name: Section Column Booster
  * Plugin URI: https://jakubforman.eu/personal-projects/section-column-booster/
  * Description: An extension plugin used in sections & columns for Elementor. It's enabling custom width in columns & horizontal align columns in a section.
- * Version: 1.1
+ * Version: 1.2
  * Author: Jakub Josef Forman
  * Author URI: http://jakubforman.eu
  * Domain Path: /languages/
@@ -13,38 +13,15 @@
  * Text Domain: section-column-booster
  * Domain Path: /languages/
  */
+
 use jayjay666\SectionColumnBooster\SectionColumnBooster;
 
-defined('ABSPATH') || exit;
+defined( 'ABSPATH' ) || exit;
 
-/**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-plugin-name-activator.php
- */
-function activate_plugin_name() {
-    // require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
-    // Plugin_Name_Activator::activate();
+// Import všech potřebných knihoven
+if ( is_readable( __DIR__ . '/lib/autoload.php' ) ) {
+	require __DIR__ . '/lib/autoload.php';
 }
-
-/**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-plugin-name-deactivator.php
- */
-function deactivate_plugin_name() {
-    // require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
-    // Plugin_Name_Deactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
-
-
-//
-// Pro composer, import composer dependencies
-if (is_readable(__DIR__ . '/vendor/autoload.php')) {
-    require __DIR__ . '/vendor/autoload.php';
-}
-
 
 /**
  * Begins execution of the plugin.

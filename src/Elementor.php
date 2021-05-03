@@ -54,8 +54,10 @@ class Elementor
 
 
         // Přidám prvky do třídy sloupce
-        Loader::addAction('elementor/element/column/layout/before_section_end', new Column(), 'addColumnControls');
+	    $hook = 'elementor/element/column/layout/before_section_end';
+        Loader::addAction($hook, new Column(), 'addColumnControls');
         // přidá rozšířené možnosti sekcí
-        Loader::addAction('elementor/element/section/section_layout/before_section_end', new Section(), 'addSectionControls');
+	    $hook = 'elementor/element/section/section_layout/before_section_end';
+	    Loader::addAction($hook, new Section(), 'addSectionControls');
     }
 }

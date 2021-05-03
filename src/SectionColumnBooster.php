@@ -25,33 +25,9 @@ class SectionColumnBooster
      */
     public function __construct()
     {
-        $this->loadDependencies();
         RequirementValidator::requirementsValidate();
         $this->i18n();
         $this->loadElementorExtends();
-    }
-
-    /**
-     * Load the required dependencies for this plugin.
-     *
-     * Include the following files that make up the plugin:
-     *
-     * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
-     *
-     * Create an instance of the loader which will be used to register the hooks
-     * with WordPress.
-     *
-     * @since    1.1
-     * @access   private
-     */
-    private function loadDependencies()
-    {
-        /**
-         * The class responsible for orchestrating the actions and filters of the
-         * core plugin.
-         * Zde použít require pokud by bylo třeba, ukázka je zakomentovaná
-         */
-        // require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Loader.php';
     }
 
 
