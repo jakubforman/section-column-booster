@@ -40,6 +40,7 @@ class Section
                     'space-evenly' => __('Space Evenly', 'elementor'),
                 ],
                 'selectors' => [ // Zde se předají data do CSS
+                    '{{WRAPPER}} .elementor-container' => 'justify-content: {{VALUE}};',
                     '{{WRAPPER}} .elementor-row' => 'justify-content: {{VALUE}};',
                 ],
             ]
