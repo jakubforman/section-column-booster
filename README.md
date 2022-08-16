@@ -1,3 +1,16 @@
+# Deprecated!!! New integrated in [AW3SM-EEP](https://github.com/awwwesome-cz/aw3sm-eep)
+
+
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+
+
+
+
+
 # Section & Column Booster
 - Author URI: [http://jakubforman.eu](http://jakubforman.eu)
 - Contributors: JayJay666
